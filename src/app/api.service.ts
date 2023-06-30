@@ -19,4 +19,8 @@ export class ApiService {
     ))
   }
 
+  public getShows(search : string) : Observable<any> {
+    return (this.httpClient.get(`https://api.tvmaze.com/search/shows?q=${search}`))
+  }
+
 }

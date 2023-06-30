@@ -13,10 +13,19 @@
   </div>
 
   <hr />
+-->
 
-  <div *ngFor="let user of userList">
+  <input type="search" placeholder="search ..." #seachField [formControl]="searchField" />
+  
+  <div *ngFor="let show of shows$ | async">
+    {{ show?.show?.name }}
+  </div> 
+
+  <hr />
+
+  <div *ngFor="let user of userList | async">
     {{ user.name }}
-  </div> -->
+  </div> 
 
   <hr />
 
